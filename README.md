@@ -1,11 +1,8 @@
 # Arjun Mini Bank — Web UI
 
-**Author:** Arjun Singh `<botarjunbot479@gmail.com>`  
-**GitHub:** [botarjunbot479-art](https://github.com/botarjunbot479-art)
+**Author:** Arjun Singh `<botarjunbot479@gmail.com>`
 
-Open account · deposit · withdraw · transfer · live ledger.
+Hosted on **GitHub only** (not on the EC2 server).
 
-```bash
-python -m http.server 8765
-# http://127.0.0.1:8765/
-```
+- **Live:** https://botarjunbot479-art.github.io/arjun-bank-web/
+- **Repo:** https://github.com/botarjunbot479-art/arjun-bank-web
