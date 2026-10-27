@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arjun Mini Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <div>
+        <p class="brand-name">Arjun Mini Bank</p>
+        <p class="brand-sub">Personal ledger · by Arjun Singh</p>
+      </div>
+    </div>
+    <p class="session" id="sessionLabel">No account open</p>
+  </header>
+
+  <main>
+    <section class="hero" id="gate">
+      <h1>Your money,<br />clear and calm.</h1>
+      <p class="lede">Open an account, move funds, read every line of the ledger — a small bank you can actually understand.</p>
+      <form class="open-form" id="openForm">
+        <label>
+          Full name
+          <input name="name" autocomplete="name" placeholder="Arjun Singh" required />
+        </label>
+        <label>
+          4-digit PIN
+          <input name="pin" inputmode="numeric" pattern="[0-9]{4,6}" maxlength="6" placeholder="••••" required />
+        </label>
+        <label>
+          Opening ₹
+          <input name="opening" type="number" min="0" step="1" value="1000" />
+        </label>
+        <button type="submit" class="cta">Open account</button>
+      </form>
+    </section>
+
+    <section class="app hidden" id="app">
+      <div class="balance-plane">
+        <p class="eyebrow">Available balance</p>
+        <p class="balance" id="balance">₹0.00</p>
+        <p class="acct" id="acctMeta"></p>
+      </div>
+
+      <div class="actions">
+        <form id="depositForm" class="cardless">
+          <h2>Deposit</h2>
+          <input name="amount" type="number" min="1" step="1" placeholder="Amount" required />
+          <button type="submit">Add funds</button>
+        </form>
+        <form id="withdrawForm" class="cardless">
+          <h2>Withdraw</h2>
+          <input name="amount" type="number" min="1" step="1" placeholder="Amount" required />
+          <input name="pin" inputmode="numeric" placeholder="PIN" required />
+          <button type="submit">Cash out</button>
+        </form>
+        <form id="transferForm" class="cardless">
+          <h2>Transfer</h2>
+          <input name="to" placeholder="Account e.g. ARJ-1002" required />
+          <input name="amount" type="number" min="1" step="1" placeholder="Amount" required />
+          <input name="pin" inputmode="numeric" placeholder="PIN" required />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      <section class="ledger">
+        <div class="ledger-head">
+          <h2>Ledger</h2>
+          <button type="button" class="ghost" id="refreshBtn">Refresh</button>
+        </div>
+        <ul id="ledger"></ul>
+      </section>
+
+      <p class="hint">Tip: open a second account in another browser profile to practice transfers — both share this device’s vault.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by <strong>Arjun Singh</strong> · <a href="mailto:botarjunbot479@gmail.com">botarjunbot479@gmail.com</a> · <a href="https://github.com/botarjunbot479-art" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
